@@ -82,10 +82,10 @@ public:
     Loop *loop() const { return _loop; }
 
     /**
-     *  Casting operator to cast the Curl object to a cURL multi handler, used
-     *  to add CURL objects to the multi handler.
+     *  Add a handle to the multi object
      *
-     *  @return CURLM*
+     *  @param  curl_easy   The curl handle to add
+     *  @return Was the handle successfully added
      */
     bool add(CURL *curl_easy)
     {
